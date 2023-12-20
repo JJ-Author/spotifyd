@@ -16,6 +16,6 @@ jobs:
             commands: |
               uname -a
               uname -mpi
-              cat /etc/cpuinfo 
+              cat /proc/cpuinfo 
               cat /etc/os-release
               curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
