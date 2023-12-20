@@ -1,0 +1,21 @@
+name: Build Pi 1 (armv6) with QEMU and Dietpi ISO
+
+on:
+    push:
+        branches: armv6-tests
+
+jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - uses: pguyot/arm-runner-action@v2
+        with:
+            base_image: dietpi:rpi_armv6_bullseye
+            cpu: arm1176
+            commands: |
+              uname -a
+              uname -mpi
+              cat /etc/cpuinfo 
+              cat /etc/os-release
+              curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
