@@ -18,4 +18,4 @@ jobs:
               uname -mpi
               cat /proc/cpuinfo 
               cat /etc/os-release
-              curl -y --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+              curl -y --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
