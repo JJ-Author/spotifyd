@@ -13,7 +13,7 @@ jobs:
         with:
             base_image: dietpi:rpi_armv6_bullseye
             cpu: arm1176
-            #cpu_info: .github/workflows/cpu-info-pi1.txt
+            cpu_info: .github/workflows/cpu-info-pi1.txt
             commands: |
               uname -a
               uname -mpi
@@ -22,3 +22,6 @@ jobs:
               curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
               pwd
               ls -la
+              df -h .
+              df
+              mount
