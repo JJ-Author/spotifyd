@@ -19,9 +19,9 @@ jobs:
               uname -mpi
               cat /proc/cpuinfo 
               cat /etc/os-release
-              curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
               pwd
               ls -la
               df -h .
               df
               mount
+              curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
